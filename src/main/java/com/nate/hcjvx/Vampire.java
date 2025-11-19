@@ -1,3 +1,5 @@
+package com.nate.hcjvx;
+
 /**
  * Vampire class that extends HorrorCharacter and implements Transformable interface
  * A vampire can transform between human and bat form

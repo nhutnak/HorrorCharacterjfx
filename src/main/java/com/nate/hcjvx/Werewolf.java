@@ -1,3 +1,5 @@
+package com.nate.hcjvx;
+
 /**
  * Represents a Werewolf character in a horror-themed game.
  * Inherits from HorrorCharacter and implements Transformable interface.

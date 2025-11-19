@@ -30,6 +30,10 @@ public class App extends Application
         scene.setRoot(loadFXML(fxml));
     }
 
+    public static void refreshScene(String fxml) throws IOException
+    {
+        Parent root = loadFXML(fxml);
+    }
     public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
         return fxmlLoader.load();

@@ -1,3 +1,5 @@
+package com.nate.hcjvx;
+
 /**
  * Zombie class that inherits from the HorrorCharacter class.
  * A zombie is vulnerable to sunlight and fire.

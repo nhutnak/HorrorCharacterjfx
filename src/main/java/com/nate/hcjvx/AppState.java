@@ -4,5 +4,5 @@ import java.util.ArrayList;
 
 public class AppState
 {
-    //ArrayList<HorrorCharacter> characters = new ArrayList<>();
+    public static ArrayList<HorrorCharacter> characters = new ArrayList<>();
 }
