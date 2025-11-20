@@ -1,5 +1,7 @@
 package com.nate.hcjvx;
 
+import java.time.LocalDate;
+
 /**
  * Zombie class that inherits from the HorrorCharacter class.
  * A zombie is vulnerable to sunlight and fire.
@@ -13,9 +15,9 @@ public class Zombie extends HorrorCharacter
      * @param health
 
      */
-    public Zombie(String name, int health)
+    public Zombie(String name, int health, LocalDate lastSpotted)
     {
-        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.FIRE});
+        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.FIRE}, lastSpotted);
     }
     /**
      * The zombie bites you.

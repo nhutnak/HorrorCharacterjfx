@@ -1,5 +1,7 @@
 package com.nate.hcjvx;
 
+import java.time.LocalDate;
+
 /**
  * Represents a Werewolf character in a horror-themed game.
  * Inherits from HorrorCharacter and implements Transformable interface.
@@ -18,9 +20,9 @@ public class Werewolf extends HorrorCharacter implements Transformable
      * @param health
      * @param transformed
      */
-    public Werewolf(String name, int health, Boolean transformed)
+    public Werewolf(String name, int health, LocalDate lastSpotted, Boolean transformed)
     {
-        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.HOLY_WATER});
+        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.HOLY_WATER},  lastSpotted);
         this.transformed = transformed;
     }
     /**
@@ -79,6 +81,11 @@ public class Werewolf extends HorrorCharacter implements Transformable
     @Override
     public String toString()
     {
-        return super.toString() + ", transformed=" + transformed;
+        String t = "Human form";
+        if(transformed)
+        {
+            t = "Wolf form";
+        }
+        return super.toString() + ", "+t;
     }
 }

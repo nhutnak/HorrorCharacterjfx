@@ -2,24 +2,24 @@ You are tasked with creating a new JavaFX application to manage the
 HorrorCharacter objects you created in a previous assignment.
 The program should have the following features:
 
--CRUD functionality (Create, Read, Update, Delete).
-The “Read” portion can come from a fake backend that simply populates a structure with HorrorCharacters,
-in a manner of your choosing.
+          -CRUD functionality (Create, Read, Update, Delete).
+        The “Read” portion can come from a fake backend that simply populates a structure with HorrorCharacters,
+        in a manner of your choosing.
 
--Two scenes, each with an FXML view, and a Controller
-The ability to pass data between the two Scenes, via the usage of a AppState class
+            -Two scenes, each with an FXML view, and a Controller
+            The ability to pass data between the two Scenes, via the usage of a AppState class
 
 -GUI Features:
 
--TextFields, labels, and buttons
+            -TextFields, labels, and buttons
 
--A ListView (bonus points if it is editable and linked to the backend)
+        -A ListView (bonus points if it is editable and linked to the backend)
 
--RadioButtons or a ComboBox – used to select the subtype of HorrorCharacter to create
+            -RadioButtons or a ComboBox – used to select the subtype of HorrorCharacter to create
 
--A DatePicker  - Add a field to base class HorrorCharacter that stores a LocalDate.
-This can represent anything of your choosing, such as a “DateOfRebirth” or “lastAttacked”.
+        -A DatePicker  - Add a field to base class HorrorCharacter that stores a LocalDate.
+        This can represent anything of your choosing, such as a “DateOfRebirth” or “lastAttacked”.
 
--Two other JavaFX GUI features that were not covered in class or in the text.
+        -Two other JavaFX GUI features that were not covered in class or in the text.
 
--An interface that doesn’t look like hot garbage.
+        -An interface that doesn’t look like hot garbage.

@@ -1,5 +1,7 @@
 package com.nate.hcjvx;
 
+import java.time.LocalDate;
+
 /**
  * Vampire class that extends HorrorCharacter and implements Transformable interface
  * A vampire can transform between human and bat form
@@ -18,9 +20,9 @@ public class Vampire extends HorrorCharacter implements Transformable
      * @param health
      * @param transformed
      */
-    public Vampire(String name, int health, Boolean transformed)
+    public Vampire(String name, int health, LocalDate lastSpotted, Boolean transformed)
     {
-        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.SILVER});
+        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.SILVER}, lastSpotted);
         this.transformed = transformed;
     }
     /**
@@ -72,6 +74,12 @@ public class Vampire extends HorrorCharacter implements Transformable
     @Override
     public String toString()
     {
-        return super.toString() + ", transformed=" + transformed;
+
+        String t = "Human form";
+        if(transformed)
+        {
+            t = "Bat form";
+        }
+        return super.toString() + ", "+t;
     }
 }

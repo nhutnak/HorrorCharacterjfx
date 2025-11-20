@@ -1,6 +1,8 @@
 package com.nate.hcjvx;
 
+import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
  * Abstract class representing a character in a horror game.
@@ -18,17 +20,20 @@ public abstract class HorrorCharacter
     /** Array of vulnerabilities for the character
      */
     Vulnerability[] vulnerabilities;
+
+    LocalDate lastSpotted;
     /**
      * Constructor for HorrorCharacter class
      * @param name
      * @param health
      * @param vulnerabilities
      */
-    public HorrorCharacter(String name, int health, Vulnerability[] vulnerabilities)
+    public HorrorCharacter(String name, int health, Vulnerability[] vulnerabilities, LocalDate lastSpotted)
     {
         this.name = name;
         this.health = health;
         this.vulnerabilities = vulnerabilities;
+        this.lastSpotted = lastSpotted;
     }
     /**
      * Abstract method for attacking. To be implemented by subclasses.
@@ -93,8 +98,9 @@ public abstract class HorrorCharacter
     public String toString()
     {
         return
-                "name='" + name+
-                ", health=" + health +
-                ", vulnerabilities=" + Arrays.toString(vulnerabilities);
+                "Name: " + name+
+                ", Health: " + health +
+                ", Vulnerabilities: " + Arrays.toString(vulnerabilities) +
+                ", Last spotted: " + lastSpotted;
     }
 }
