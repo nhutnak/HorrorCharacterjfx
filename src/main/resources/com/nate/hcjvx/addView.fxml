@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nate.hcjvx.AddViewController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="53.0" prefWidth="627.0" text="Character creator" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets left="81.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fx:id="imageView" fitHeight="73.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true">
+                     <HBox.margin>
+                        <Insets right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox prefHeight="93.0" prefWidth="600.0">
+               <children>
+                  <VBox prefHeight="93.0" prefWidth="223.0">
+                     <children>
+                        <TextField fx:id="name" promptText="Name...">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TextField fx:id="health" promptText="Health...">
+                           <VBox.margin>
+                              <Insets top="32.0" />
+                           </VBox.margin>
+                        </TextField>
+                     </children>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </VBox>
+                  <ComboBox fx:id="comboBox" prefWidth="150.0" promptText="-Select Type-">
+                     <HBox.margin>
+                        <Insets left="5.0" top="35.0" />
+                     </HBox.margin>
+                  </ComboBox>
+                  <VBox prefHeight="80.0" prefWidth="194.0">
+                     <children>
+                        <CheckBox fx:id="transformed" mnemonicParsing="false" prefHeight="17.0" prefWidth="173.0" text="Transformed (If Applicable)">
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                        </CheckBox>
+                        <Label text="Date Last Seen" textAlignment="CENTER">
+                           <VBox.margin>
+                              <Insets left="40.0" top="15.0" />
+                           </VBox.margin>
+                        </Label>
+                        <DatePicker fx:id="datePicker">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </DatePicker>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="76.0" prefWidth="600.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#Make" prefHeight="42.0" prefWidth="80.0" text="Create Character" textAlignment="CENTER" wrapText="true">
+                     <HBox.margin>
+                        <Insets left="200.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToAddView" text="To Viewer">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="50.0" top="15.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="created" prefHeight="17.0" prefWidth="110.0" text="Waiting">
+                     <HBox.margin>
+                        <Insets left="50.0" top="36.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ProgressBar fx:id="progressBar" prefWidth="200.0" progress="0.0">
+                     <HBox.margin>
+                        <Insets left="40.0" top="35.0" />
+                     </HBox.margin>
+                  </ProgressBar>
+                  <Button mnemonicParsing="false" onAction="#populateList" prefHeight="31.0" prefWidth="79.0" text="POPULATE LIST" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" top="27.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="20.0" />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>
